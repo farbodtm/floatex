@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>mediaWindow.js</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <style>
+    [draggable] {
+      -moz-user-select: none;
+      -khtml-user-select: none;
+      -webkit-user-select: none;
+      user-select: none;
+      /* Required to make elements draggable in old WebKit */
+      -khtml-user-drag: element;
+      -webkit-user-drag: element;
+    }
+      body {
+        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+      }
+      #element {
+        width: 90%;
+        height: 500px;
+        margin: 0 auto;
+        overflow: hidden;
+      }
+      #div1, #div2, #div3 {
+        position: absolute;
+        border: 1px solid black;
+        border-radius: 8px;
+        width: 200px;
+        height: 100px;
+        margin: 10px;
+        background-color: #EEEEEE;
+      }
+      #element div{
+        position: absolute;
+        border: 1px solid black;
+        border-radius: 8px;
+        width: 200px;
+        height: 100px;
+      }
+    </style>
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="">
+                    <link rel="apple-touch-icon-precomposed" href="">
+                                   <link rel="shortcut icon" href="">
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="#">floatex.js</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active"><a href="#">/</a></li>
+              <li><a href="#about">/</a></li>
+              <li><a href="#contact">/</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container" id="element">
+      <div id="div1" style="width: 100px; top: 100px; left: 100px;" draggable="true"> </div>
+      <div id="div2"style=" top: 250px; left: 200px;" draggable="true"> </div>
+      <div id="div3" style="width: 150px; top: 400px; left: 400px;" draggable="true"> </div>
+    </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+    <script src="../floatex.js"></script>
+    <script>
+      var fl = floatex('element');
+      fl.init();
+    </script>
+  </body>
+</html>
